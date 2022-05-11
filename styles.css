@@ -1,0 +1,96 @@
+/*=====================Initialisation du fichier CSS======================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*tout le background soit hérité de l'élément parent*/
+    background: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #b5b5b5;
+}
+
+section {
+    width: 300px;
+    height: 500px;
+    background-color: #fafafa;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 3px 6px 5px rgba(0, 0, 0, 0.16);
+}
+
+header {
+    background-color: orange;
+    padding: 10px;
+    text-align: center;
+}
+h1 {
+    padding: 10px;
+}
+input {
+    background-color: white;
+    border: none;
+    width: 50%;
+    padding: 10px;
+    font-size: 14px;
+}
+input[type="submit"]{
+    width: 30%;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: inherit;
+    border: 3px solid white;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    width: 100%;
+}
+li {
+    padding: 10px 10px 10px 40px;
+    position: relative;
+}
+/*pseudo class mettant les enfants impairs en une autre couleur*/
+li:nth-child(2n+1) {
+    background-color: #ebebeb;
+}
+/*combinateur*/
+li > span {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 10px 10px;
+}
+span:hover{
+    background-color: red;
+    width: 30px;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: #d6d1d1;
+}
+
+li.checked{
+    text-decoration: line-through;
+    color: white;
+    background-color: rgb(165, 162, 162);
+}
+
+li.checked::before {
+    content: "";
+    position: absolute;
+    border-color: white;
+    border-style: solid;
+    border-width: 0px 2px 2px 0px;
+    top: 10px;
+    left: 16px;
+    height: 15px;
+    width: 7px;
+    transform: rotate(45deg);
+}
