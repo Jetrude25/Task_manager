@@ -14,7 +14,7 @@ body {
 
 section {
     width: 80%;
-    height: 80%;
+    max-height: 300vh;
     border-radius: 25px;
     background-color: #000000;
     position: absolute;
@@ -104,6 +104,7 @@ li.checked{
     background-color: rgb(165, 162, 162);
 }
 
+/* Validation d'une tâche*/
 li.checked::before {
     content: "";
     position: absolute;
