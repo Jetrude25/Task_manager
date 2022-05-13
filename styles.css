@@ -1,50 +1,57 @@
-/*=====================Initialisation du fichier CSS======================*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*tout le background soit hérité de l'élément parent*/
-    background: inherit;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 body {
-    background-color: #b5b5b5;
+    background-color: #4472c4;
 }
 
 section {
-    width: 300px;
-    height: 500px;
-    background-color: #fafafa;
+    width: 80%;
+    height: 80%;
+    border-radius: 25px;
+    background-color: #000000;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: 10%;
+    top: 10%;
     box-shadow: 0 3px 6px 5px rgba(0, 0, 0, 0.16);
 }
 
 header {
-    background-color: orange;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
+    border-radius: 30px;
 }
 h1 {
-    padding: 10px;
+    padding: 15px;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 2rem;
 }
 input {
     background-color: white;
     border: none;
-    width: 50%;
+    border-radius: 8px;
+    margin-right: 10px;
+    width: 70%;
     padding: 10px;
-    font-size: 14px;
+    font-size: 16px;
 }
 input[type="submit"]{
-    width: 30%;
+    width: 15%;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: inherit;
-    border: 3px solid white;
+    border: 1px solid white;
     color: white;
+    background-color: #4472C4;
+    font-size: 16px;
 }
 
 ul {
@@ -54,38 +61,53 @@ ul {
 li {
     padding: 10px 10px 10px 40px;
     position: relative;
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 7.5%;
+    margin-right: 8.5%;
+    border-radius: 8px;
+    background-color: white;
 }
-/*pseudo class mettant les enfants impairs en une autre couleur*/
+
 li:nth-child(2n+1) {
-    background-color: #ebebeb;
+    background-color: #bfbfbf;
 }
-/*combinateur*/
+
 li > span {
     position: absolute;
     right: 0px;
     top: 0px;
     padding: 10px 10px;
+    border-radius: 8px;
 }
 span:hover{
     background-color: red;
-    width: 30px;
+    width: 35px;
+    margin-top: 3px;
+    margin-right: 3px;
+    margin-bottom: 1px;
+    height: 35px;
+    align-content: center;
+    border-radius: 5px;
+    border: 1px solid white;
 }
 
 li:hover {
     cursor: pointer;
-    background-color: #d6d1d1;
+    background-color: #8faadc;
 }
 
 li.checked{
     text-decoration: line-through;
-    color: white;
+    color: black;
     background-color: rgb(165, 162, 162);
 }
 
 li.checked::before {
     content: "";
     position: absolute;
-    border-color: white;
+    border-color: black;
     border-style: solid;
     border-width: 0px 2px 2px 0px;
     top: 10px;
@@ -94,3 +116,4 @@ li.checked::before {
     width: 7px;
     transform: rotate(45deg);
 }
+
